@@ -11,6 +11,6 @@ jobs:
     - name: Hello step
       run: echo Hello
 
-    -name: GitHub Cli
+    - name: GitHub Cli
       run: |
         gh issue create --title "Issue ${{github.sha}} created" --body "Body"
