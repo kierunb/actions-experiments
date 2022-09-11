@@ -1,0 +1,16 @@
+name: Third
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Hello step
+      run: echo Hello
+
+    -name: GitHub Cli
+      run: |
+        gh issue create --title "Issue ${{github.sha}} created" --body "Body"
