@@ -28,11 +28,14 @@ jobs:
 
   parallel-job:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    
     steps:
-      - shell: bash
-        run: |
-          echo This run in parallel
+        - name: Shell Command
+          run: |
+            echo This run in parallel
 
 
   second-job:
