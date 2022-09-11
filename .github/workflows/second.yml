@@ -16,3 +16,6 @@ jobs:
       
       - name: Run node
         run: node test.js 
+
+      - name: List files
+        run: ls 
