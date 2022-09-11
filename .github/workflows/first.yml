@@ -17,7 +17,7 @@ jobs:
 
     # custom job level env variables:
     env: 
-      job-param1: param1
+      job-param1: job-param1
 
     steps:
       - uses: actions/checkout@v3
@@ -25,5 +25,5 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: Run a one-line script
-        run: echo param1 is $param1 and job-param1 is $job-param1
+      - name: Read environmental parameters
+        run: echo param1 is ${{env.param1}} and job-param1 is ${{env.job-param1}}
