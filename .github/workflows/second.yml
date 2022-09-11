@@ -19,3 +19,21 @@ jobs:
 
       - name: List files
         run: ls 
+
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: output
+
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts
+    
+      - name: List files
+        run: ls output
