@@ -1,4 +1,4 @@
-name: CI
+name: First
 
 on:
   # push:
@@ -9,7 +9,6 @@ on:
 env: 
   param1: param1
   param2: param2
-
 
 jobs:
   first-job:
