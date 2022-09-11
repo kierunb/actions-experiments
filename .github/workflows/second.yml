@@ -26,9 +26,19 @@ jobs:
           name: artifacts
           path: .
 
-  second-job:
+  parallel-job:
     runs-on: ubuntu-latest
 
+    steps:
+      - shell: bash
+        run: |
+          echo This run in parallel
+
+
+  second-job:
+    needs: first-job
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
