@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifacts
-          path: output
+          path: .
 
   second-job:
     runs-on: ubuntu-latest
