@@ -46,4 +46,4 @@ jobs:
           name: artifacts
     
       - name: List files
-        run: ls output
+        run: ls
